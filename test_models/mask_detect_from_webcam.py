@@ -5,9 +5,16 @@ from tensorflow.keras.models import model_from_json
 from tensorflow.keras.optimizers import Adam
 
 
+# Antes de ejecutar este programa se deben crear y entrenar los modelos existentes
+#  en este proyeco. Para hacerlo se ejecutan los programas generate_model.py lo cual
+#  crea dos archivos en la carpeta ./model: model.json y weights.h5
+# Una vez realizado esto, se modifican las variables model_path y weights_path con
+#  sus respectivas direcciones y se ejecuta este programa.
+
+
 # model paths
 model_path = './test_models/IA_Keras_CNN_Image_Clasification/model/model.json'
-weights_path = './test_models/IA_Keras_CNN_Image_Clasification/model/model.h5'
+weights_path = './test_models/IA_Keras_CNN_Image_Clasification/model/weights.h5'
 
 
 # GET MODEL
