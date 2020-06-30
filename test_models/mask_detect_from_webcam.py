@@ -13,8 +13,8 @@ from tensorflow.keras.optimizers import Adam
 
 
 # model paths
-model_path = './test_models/IA_Keras_CNN_Image_Clasification/model/model.json'
-weights_path = './test_models/IA_Keras_CNN_Image_Clasification/model/weights.h5'
+model_path = './test_models/01_IA_Keras_CNN_Image_Clasification/model/model.json'
+weights_path = './test_models/01_IA_Keras_CNN_Image_Clasification/model/weights.h5'
 
 
 # GET MODEL

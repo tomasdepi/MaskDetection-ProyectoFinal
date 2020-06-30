@@ -12,17 +12,17 @@ from tensorflow.keras.models import model_from_json
 # GET MODEL
 
 # path de imagenes
-path_with_mask = './test_models/IA_Keras_CNN_Image_Clasification/data/train/with_mask'
-path_without_mask = './test_models/IA_Keras_CNN_Image_Clasification/data/train/without_mask'
+path_with_mask = './test_models/01_IA_Keras_CNN_Image_Clasification/data/train/with_mask'
+path_without_mask = './test_models/01_IA_Keras_CNN_Image_Clasification/data/train/without_mask'
 
 # se obtiene el modelo generado
-json_file = open('./test_models/IA_Keras_CNN_Image_Clasification/model/model.json', 'r')
+json_file = open('./test_models/01_IA_Keras_CNN_Image_Clasification/model/model.json', 'r')
 loaded_model = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model)
 
 # se obtienen los pesos
-model.load_weights("./test_models/IA_Keras_CNN_Image_Clasification/model/model.h5")
+model.load_weights("./test_models/01_IA_Keras_CNN_Image_Clasification/model/weights.h5")
 print("Modelo cargado")
 
 # se compila nuevamente el modelo

@@ -20,11 +20,11 @@ def split_data(dataset, ratio=0.85):
 # vector de imagenes
 images = []
 # paths de imagenes
-path_with_mask = './test_models/IA_Keras_CNN_Image_Clasification/data/train/with_mask'
-path_without_mask = './test_models/IA_Keras_CNN_Image_Clasification/data/train/without_mask'
+path_with_mask = './test_models/01_IA_Keras_CNN_Image_Clasification/data/train/with_mask'
+path_without_mask = './test_models/01_IA_Keras_CNN_Image_Clasification/data/train/without_mask'
 list_file_with = os.listdir(path_with_mask)
 list_file_without = os.listdir(path_without_mask)
-target_dir = './test_models/IA_Keras_CNN_Image_Clasification/model/'
+target_dir = './test_models/01_IA_Keras_CNN_Image_Clasification/model/'
 
 # se agregan las imagenes de las caras con barbijos
 for filename in tqdm(list_file_with):
@@ -112,9 +112,9 @@ if not os.path.exists(target_dir):
 
 # creacion y alamacenamiento del modelo en formato jason
 model_json = model.to_json()
-with open("./test_models/IA_Keras_CNN_Image_Clasification/model/model.json", "w") as json_file:
+with open("./test_models/01_IA_Keras_CNN_Image_Clasification/model/model.json", "w") as json_file:
     json_file.write(model_json)
 
 # almacenamiento de los pesos a formato h5
-model.save_weights("./test_models/IA_Keras_CNN_Image_Clasification/model/model.h5")
+model.save_weights("./test_models/01_IA_Keras_CNN_Image_Clasification/model/weights.h5")
 print("Se ha guardado el modelo generado")
